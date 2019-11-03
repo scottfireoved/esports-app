@@ -1,38 +1,27 @@
 <template>
-  <nav class="main-nav">
-    <ul>
-      <li>
-        <router-link :to="{name: 'Home'}">Home</router-link>
-      </li>
-      <li>
-        <router-link :to="{name: 'Team'}">Team</router-link>
-      </li>
-      <li>
-        <router-link :to="{name: 'Community'}">Community</router-link>
-      </li>
-      <li>
-        <router-link :to="{name: 'About'}">About</router-link>
-      </li>
-    </ul>
-    <h2>User Profiles</h2>
-    <ul>
-      <li v-for="(profile, index) in profiles" :key="index" style="display: block;">
-        <router-link :to="{name: 'Profile', params: { user_id: profile.userId}}">
-          <span>Name: {{ profile.name }}</span>
-          <span>Role: {{ profile.role }}</span>
-          <br />
+  <div class="navbar">
+    <nav class="nav-extended indigo darken-2">
+      <div class="nav-content">
+        <router-link :to="{name: 'Home'}">
+          <span class="nav-title">Home</span>
         </router-link>
-      </li>
-    </ul>
-    <h2>Navigation Controls</h2>
-    <ul>
-      <li>
-        <button @click="goBack">Go Back</button>
-        <button @click="goHome">Redirect to Home</button>
-        <button @click="goForward">Go Forward</button>
-      </li>
-    </ul>
-  </nav>
+        <router-link :to="{name: 'Team'}">
+          <span class="nav-title">Team</span>
+        </router-link>
+        <router-link :to="{name: 'Community'}">
+          <span class="nav-title">Community</span>
+        </router-link>
+        <router-link :to="{name: 'About'}">
+          <span class="nav-title">About</span>
+        </router-link>
+        <a href class="btn-floating btn-large halfway-fab pink">
+          <router-link to>
+            <i class="material-icons">add</i>
+          </router-link>
+        </a>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -42,7 +31,7 @@ export default {
     return {
       profiles: [
         { userId: "1", name: "JBeerdo", role: "Captain" },
-        { userId: "2", name: "HighBriD", role: "Member" },
+        { userId: "2", name: "Uncle Bobbie", role: "Member" },
         { userId: "3", name: "Caleb", role: "Member" },
         { userId: "4", name: "Dank", role: "Equip. Manager" }
       ]
@@ -63,6 +52,9 @@ export default {
 </script>
 
 <style>
+.navbar nav {
+  padding: 0 20px;
+}
 ul {
   list-style-type: none;
   padding: 0;
