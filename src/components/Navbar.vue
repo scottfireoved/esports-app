@@ -2,11 +2,11 @@
   <div class="navbar">
     <nav class="nav-extended indigo darken-2">
       <div class="nav-wrapper">
-        <!-- <a href="#!" class="brand-logo left">Logo</a> -->
+        <a href="#!" class="brand-logo left">Walrus Whippers</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i>
         </a>
-        <div id="nav-mobile" class="center hide-on-med-and-down">
+        <div id="nav-mobile" class="right hide-on-med-and-down">
           <li>
             <router-link :to="{name: 'Home'}">Home</router-link>
           </li>
@@ -21,6 +21,10 @@
           </li>
           <li>
             <router-link :to="{name: 'About'}">About</router-link>
+          </li>
+
+          <li>
+            <button class="btn waves-effect waves-teal" @click="login">Login</button>
           </li>
         </div>
       </div>
@@ -68,6 +72,9 @@ export default {
     },
     goForward() {
       this.$router.go(1);
+    },
+    login() {
+      this.$router.push({ name: "Login" });
     }
   }
 };

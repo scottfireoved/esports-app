@@ -6,6 +6,7 @@ import Community from '@/components/Community'
 import About from '@/components/About'
 import Profile from '@/components/Profile'
 import Shop from '@/components/Shop'
+import Login from '@/components/Login'
 
 Vue.use(Router)
 
@@ -36,6 +37,10 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
+    }, {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ]
 })

@@ -2,40 +2,15 @@
   <div class="container">
     <h1>Community</h1>
     <ul class="collection">
-      <li class="collection-item avatar">
-        <img src="https://picsum.photos/200/300" alt class="circle" />
-        <span class="title left">Uncle Bobbie</span>
+      <li v-for="(post, index) in posts" :key="index" class="collection-item avatar">
+        <img v-bind:src="post.img" alt class="circle" />
+        <span class="title left">{{ post.user }}</span>
         <br />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">report</i>
-        </a>
-      </li>
-      <li class="collection-item avatar">
-        <img src="https://picsum.photos/200/300" alt class="circle" />
-        <span class="title left">JBeerdo</span>
+        <p>{{ post.body }}</p>
+        <p class="right grey-text lighten-3">{{post.date}}</p>
         <br />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#!" class="secondary-content">
-          <i class="material-icons">report</i>
-        </a>
-      </li>
-      <li class="collection-item avatar">
-        <img src="https://picsum.photos/200/300" alt class="circle" />
-        <span class="title left">Dank</span>
-        <br />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">report</i>
-        </a>
-      </li>
-      <li class="collection-item avatar">
-        <img src="https://picsum.photos/200/300" alt class="circle" />
-        <span class="title left">Caleb</span>
-        <br />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">report</i>
+          <i class="material-icons">flag</i>
         </a>
       </li>
     </ul>
@@ -47,7 +22,36 @@ export default {
   name: "Community",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      posts: [
+        {
+          user: "Uncle Bobbie",
+          body:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          img: "https://picsum.photos/200/300",
+          date: new Date()
+        },
+        {
+          user: "JBeerdo",
+          body:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          img: "https://picsum.photos/200/300",
+          date: new Date()
+        },
+        {
+          user: "Dank",
+          body:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          img: "https://picsum.photos/200/300",
+          date: new Date()
+        },
+        {
+          user: "Caleb",
+          body:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          img: "https://picsum.photos/200/300",
+          date: new Date()
+        }
+      ]
     };
   }
 };
