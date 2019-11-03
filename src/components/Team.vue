@@ -1,23 +1,22 @@
 <template>
-  <div class="team">
+  <div class="container">
     <h1>Team</h1>
-    <ul>
-      <li v-for="(profile, index) in profiles" :key="index" style="display: block;">
-        <router-link :to="{name: 'Profile', params: { user_id: profile.userId}}">
-          <span>Name: {{ profile.name }}</span>
-          <span>Role: {{ profile.role }}</span>
-          <br />
-        </router-link>
-      </li>
-    </ul>
-    <!-- <h2>Navigation Controls</h2>
-    <ul>
-      <li>
-        <button @click="goBack">Go Back</button>
-        <button @click="goHome">Redirect to Home</button>
-        <button @click="goForward">Go Forward</button>
-      </li>
-    </ul>-->
+
+    <div class="row">
+      <div v-for="(profile, index) in profiles" :key="index" class="col s3">
+        <a href="#!" class="player-card" @click="goProfile(profile.userId)">
+          <div class="card">
+            <div class="card-image">
+              <img v-bind:src="profile.imgUrl" />
+              <span class="card-title blue-text">{{ profile.name }}</span>
+            </div>
+            <div class="card-content">
+              <p>{{ profile.role}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -27,18 +26,47 @@ export default {
   data() {
     return {
       profiles: [
-        { userId: "1", name: "JBeerdo", role: "Captain" },
-        { userId: "2", name: "Uncle Bobbie", role: "Member" },
-        { userId: "3", name: "Caleb", role: "Member" },
-        { userId: "4", name: "Dank", role: "Equip. Manager" }
+        {
+          userId: 1,
+          name: "JBeerdo",
+          role: "Captain",
+          imgUrl:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+        },
+        {
+          userId: 2,
+          name: "Uncle Bobbie",
+          role: "Member",
+          imgUrl:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+        },
+        {
+          userId: 3,
+          name: "Caleb",
+          role: "Member",
+          imgUrl:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+        },
+        {
+          userId: 4,
+          name: "Dank",
+          role: "Equip. Manager",
+          imgUrl:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+        }
       ]
     };
+  },
+  methods: {
+    goProfile(profileId) {
+      this.$router.push({ name: "Profile", params: { user_id: profileId } });
+    }
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style >
+<style  >
 h1,
 h2 {
   font-weight: normal;

@@ -1,26 +1,48 @@
 <template>
   <div class="navbar">
     <nav class="nav-extended indigo darken-2">
-      <div class="nav-content">
-        <router-link :to="{name: 'Home'}">
-          <span class="nav-title">Home</span>
-        </router-link>
-        <router-link :to="{name: 'Team'}">
-          <span class="nav-title">Team</span>
-        </router-link>
-        <router-link :to="{name: 'Community'}">
-          <span class="nav-title">Community</span>
-        </router-link>
-        <router-link :to="{name: 'About'}">
-          <span class="nav-title">About</span>
-        </router-link>
-        <a href class="btn-floating btn-large halfway-fab pink">
-          <router-link to>
-            <i class="material-icons">add</i>
-          </router-link>
+      <div class="nav-wrapper">
+        <!-- <a href="#!" class="brand-logo left">Logo</a> -->
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
         </a>
+        <div id="nav-mobile" class="center hide-on-med-and-down">
+          <li>
+            <router-link :to="{name: 'Home'}">Home</router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'Team'}">Team</router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'Community'}">Community</router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'Shop'}">Shop</router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'About'}">About</router-link>
+          </li>
+        </div>
       </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <router-link :to="{name: 'Home'}">Home</router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'Team'}">Team</router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'Community'}">Community</router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'Shop'}">Shop</router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'About'}">About</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -51,10 +73,10 @@ export default {
 };
 </script>
 
-<style>
-.navbar nav {
+<style >
+/* .navbar nav {
   padding: 0 20px;
-}
+} */
 ul {
   list-style-type: none;
   padding: 0;
@@ -62,11 +84,12 @@ ul {
 a {
   color: #42b983;
 }
-li {
+nav ul li {
   display: inline-block;
   margin: 10p;
 }
+
 .router-link-exact-active {
-  color: purple;
+  color: burlywood;
 }
 </style>

@@ -5,6 +5,7 @@ import Team from '@/components/Team'
 import Community from '@/components/Community'
 import About from '@/components/About'
 import Profile from '@/components/Profile'
+import Shop from '@/components/Shop'
 
 Vue.use(Router)
 
@@ -27,6 +28,10 @@ export default new Router({
       path: '/community',
       name: 'Community',
       component: Community
+    }, {
+      path: '/shop',
+      name: 'Shop',
+      component: Shop
     }, {
       path: '/about',
       name: 'About',
