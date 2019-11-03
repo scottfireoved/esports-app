@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Team from '@/components/Team'
 import Community from '@/components/Community'
 import About from '@/components/About'
+import Profile from '@/components/Profile'
 
 Vue.use(Router)
 
@@ -17,6 +18,10 @@ export default new Router({
       path: '/team',
       name: 'Team',
       component: Team
+    }, {
+      path: '/team/profile/:user_id',
+      name: 'Profile',
+      component: Profile
     }, {
       path: '/community',
       name: 'Community',
