@@ -33,11 +33,13 @@ export default new Router({
       path: '/shop',
       name: 'Shop',
       component: Shop
-    }, {
-      path: '/about',
-      name: 'About',
-      component: About
-    }, {
+    }
+    // , {
+    //   path: '/about',
+    //   name: 'About',
+    //   component: About
+    // }
+    , {
       path: '/login',
       name: 'Login',
       component: Login

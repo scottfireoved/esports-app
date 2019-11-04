@@ -8,9 +8,9 @@
           <div class="card">
             <div class="card-image">
               <img v-bind:src="profile.imgUrl" />
-              <span class="card-title blue-text">{{ profile.name }}</span>
+              <span class="card-title cyan-text">{{ profile.name }}</span>
             </div>
-            <div class="card-content">
+            <div class="card-content cyan-text">
               <p>{{ profile.role}}</p>
             </div>
           </div>
@@ -78,8 +78,5 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 </style>

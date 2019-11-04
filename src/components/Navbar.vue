@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <nav class="nav-extended indigo darken-2">
+    <nav class="nav-extended light-blue lighten-1">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo left">Walrus Whippers</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
@@ -19,12 +19,12 @@
           <li>
             <router-link :to="{name: 'Shop'}">Shop</router-link>
           </li>
-          <li>
+          <!-- <li>
             <router-link :to="{name: 'About'}">About</router-link>
-          </li>
+          </li>-->
 
           <li>
-            <button class="btn waves-effect waves-teal" @click="login">Login</button>
+            <button class="btn waves-effect waves-cyan lighten-1" @click="login">Login</button>
           </li>
         </div>
       </div>
@@ -43,9 +43,9 @@
       <li>
         <router-link :to="{name: 'Shop'}">Shop</router-link>
       </li>
-      <li>
+      <!-- <li>
         <router-link :to="{name: 'About'}">About</router-link>
-      </li>
+      </li>-->
     </ul>
   </div>
 </template>
@@ -81,9 +81,6 @@ export default {
 </script>
 
 <style >
-/* .navbar nav {
-  padding: 0 20px;
-} */
 ul {
   list-style-type: none;
   padding: 0;
@@ -91,9 +88,9 @@ ul {
 a {
   color: #42b983;
 }
-nav ul li {
+li {
   display: inline-block;
-  margin: 10p;
+  margin: 0 10px;
 }
 
 .router-link-exact-active {
