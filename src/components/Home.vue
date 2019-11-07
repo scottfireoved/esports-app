@@ -2,6 +2,11 @@
   <div class="container">
     <div class="section no-pad-bot" id="index-banner">
       <div class="container">
+        <!-- <div class="parallax-container">
+          <div class="parallax">
+            <img src="https://materializecss.com/images/parallax1.jpg" alt class="responsive-img" />
+          </div>
+        </div>-->
         <br />
         <br />
         <h1 class="header center cyan-text">Starter Template</h1>

@@ -2,7 +2,7 @@
   <div class="navbar">
     <nav class="nav-extended light-blue lighten-1">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo left">Walrus Whippers</a>
+        <a href="#!" class="brand-logo left" @click="goHome">Walrus Whippers</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i>
         </a>
