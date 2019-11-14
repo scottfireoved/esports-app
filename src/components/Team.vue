@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Team</h1>
+    <h1 class="cyan-text">Team</h1>
 
     <div class="row">
       <div v-for="(profile, index) in profiles" :key="index" class="col s3">
@@ -8,10 +8,10 @@
           <div class="card">
             <div class="card-image">
               <img v-bind:src="profile.imgUrl" />
-              <span class="card-title cyan-text">{{ profile.name }}</span>
             </div>
             <div class="card-content cyan-text">
-              <p>{{ profile.role}}</p>
+              <span>{{ profile.name }}</span>
+              <span>({{ profile.role}})</span>
             </div>
           </div>
         </a>
@@ -31,28 +31,28 @@ export default {
           name: "JBeerdo",
           role: "Captain",
           imgUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+            "https://www.publicdomainpictures.net/pictures/240000/nahled/cartoon-walrus.jpg"
         },
         {
           userId: 2,
           name: "Uncle Bobbie",
           role: "Member",
           imgUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+            "https://www.publicdomainpictures.net/pictures/240000/nahled/cartoon-walrus.jpg"
         },
         {
           userId: 3,
           name: "Caleb",
           role: "Member",
           imgUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+            "https://www.publicdomainpictures.net/pictures/240000/nahled/cartoon-walrus.jpg"
         },
         {
           userId: 4,
           name: "Dank",
           role: "Equip. Manager",
           imgUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSf9gLJ0T0BxwdZ09DYvMcsR7ECdGVDFKf-1EWwopuVqqTLqnkx"
+            "https://www.publicdomainpictures.net/pictures/240000/nahled/cartoon-walrus.jpg"
         }
       ]
     };

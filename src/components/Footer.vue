@@ -1,6 +1,6 @@
 <template>
-  <footer class="page-footer light-blue lighten-1">
-    <div class="footer-copyright light-blue lighten-1">
+  <footer class="page-footer light-blue darken-4">
+    <div class="footer-copyright light-blue darken-4">
       <div class="container">
         © {{new Date().getFullYear()}} Copyright Text
         <a

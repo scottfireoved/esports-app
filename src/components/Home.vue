@@ -1,19 +1,19 @@
 <template>
-  <div class="container">
-    <div class="section no-pad-bot" id="index-banner">
-      <div class="container">
-        <!-- <div class="parallax-container">
-          <div class="parallax">
-            <img src="https://materializecss.com/images/parallax1.jpg" alt class="responsive-img" />
-          </div>
-        </div>-->
+  <div>
+    <div class="parallax-container">
+      <div class="parallax">
+        <img
+          src="https://www.eneba.com/blog/wp-content/uploads/2019/09/Call-of-Duty-Modern-Warfare.jpeg"
+        />
+      </div>
+    </div>
+    <div class="container section white">
+      <div class="row container">
         <br />
         <br />
-        <h1 class="header center cyan-text">Starter Template</h1>
+        <h1 class="header center cyan-text">Welcome to the Walrus Whippers Esports Website</h1>
         <div class="row center">
-          <h5
-            class="header col s12 light"
-          >A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Join the community by clicking below</h5>
         </div>
         <div class="row center">
           <a
@@ -24,6 +24,13 @@
         </div>
         <br />
         <br />
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax">
+        <img
+          src="http://www.gamers.at/wp-content/uploads/2019/05/Call_of_Duty_Modern_Warfare_SECONDARY_02_low.jpg"
+        />
       </div>
     </div>
   </div>
@@ -39,4 +46,7 @@ export default {
 </script>
 
 <style >
+.parallax-container {
+  height: 500px;
+}
 </style>

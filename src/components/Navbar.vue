@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <nav class="nav-extended light-blue lighten-1">
+    <nav class="nav-extended light-blue darken-4">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo left" @click="goHome">Walrus Whippers</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
